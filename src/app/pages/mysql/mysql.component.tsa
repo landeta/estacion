@@ -1,0 +1,30 @@
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable'; // Observable from reactive extensions for JS
+// import { , IError, IFieldInfo } from 'types/mysql'; // Necessary mysql module type definitions
+
+IConnection
+
+import mysql = require('mysql'); // MySQL module
+@Component({
+  selector: 'app-mysql',
+  templateUrl: './mysql.component.html',
+  styleUrls: ['./mysql.component.scss']
+})
+export class MysqlComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+
+// create connection to some SQL host
+let connection = mysql.createConnection({
+    host: '192.168.1.1',
+    user: 'demo',
+    password: 'secret',
+    database: 'demo_db'
+});
